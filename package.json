@@ -1,0 +1,16 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "for weather app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vikrant Verma",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "twilio": "^3.67.1"
+  },
+  "devDependencies": {}
+}
