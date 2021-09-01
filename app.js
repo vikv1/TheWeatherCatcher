@@ -56,7 +56,7 @@ function showError(error) {
     notificationElement.innerHTML="<p> Couldn't get location. </p>"
 }
 function getSearchWeather(city) {
-    let api='https://api.openweathermap.org/data/2.5/weather?q='+city+'&units=imperial'+'&appid='+key
+    let api='https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q='+city+'&units=imperial'+'&appid='+key
     fetch(api)
     .then(function (response){
         let data=response.json()
@@ -85,7 +85,7 @@ function getSearchWeather(city) {
 function getWeather(lat, long) {
     longitude = long
     latitude = lat
-    let api='https://api.openweathermap.org/data/2.5/weather?lat='+latitude+'&units=imperial'+'&lon='+longitude+'&appid='+key
+    let api='https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?lat='+latitude+'&units=imperial'+'&lon='+longitude+'&appid='+key
 
     fetch(api)
     .then(function (response){
