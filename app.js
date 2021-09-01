@@ -56,7 +56,7 @@ function showError(error) {
     notificationElement.innerHTML="<p> Couldn't get location. </p>"
 }
 function getSearchWeather(city) {
-    let api='http://api.openweathermap.org/data/2.5/weather?q='+city+'&units=imperial'+'&appid='+key
+    let api='https://api.openweathermap.org/data/2.5/weather?q='+city+'&units=imperial'+'&appid='+key
     fetch(api)
     .then(function (response){
         let data=response.json()
@@ -85,7 +85,7 @@ function getSearchWeather(city) {
 function getWeather(lat, long) {
     longitude = long
     latitude = lat
-    let api='http://api.openweathermap.org/data/2.5/weather?lat='+latitude+'&units=imperial'+'&lon='+longitude+'&appid='+key
+    let api='https://api.openweathermap.org/data/2.5/weather?lat='+latitude+'&units=imperial'+'&lon='+longitude+'&appid='+key
 
     fetch(api)
     .then(function (response){
@@ -116,7 +116,7 @@ function getWeather(lat, long) {
 
 
 function displayWeather() {
-    iconElement.innerHTML="<img src=http://openweathermap.org/img/wn/"+weather.iconId+"@2x.png>"
+    iconElement.innerHTML="<img src=https://openweathermap.org/img/wn/"+weather.iconId+"@2x.png>"
     tempElement.innerHTML=weather.temperature.value + '°<span>F<span>'
     descElement.innerHTML=weather.description
     locationElement.innerHTML= weather.city + ', ' + weather.country
