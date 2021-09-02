@@ -116,7 +116,7 @@ function getWeather(lat, long) {
 
 
 function displayWeather() {
-    iconElement.innerHTML="<img src=https://openweathermap.org/img/wn/"+weather.iconId+"@2x.png>"
+    iconElement.innerHTML="<img src=http://openweathermap.org/img/wn/"+weather.iconId+"@2x.png>"
     tempElement.innerHTML=weather.temperature.value + '°<span>F<span>'
     descElement.innerHTML=weather.description
     locationElement.innerHTML= weather.city + ', ' + weather.country
