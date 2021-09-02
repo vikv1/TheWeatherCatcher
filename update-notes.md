@@ -1,6 +1,6 @@
 # v1.2
 --------------------------------------
-+Added Update Notes hyperlink to the bottom right
++Added Update Notes hyperlink to the bottom right  
 -Advanced Stats not showing for some users, figuring out fix
 
 
