@@ -2,6 +2,7 @@
 --------------------------------------
 +Added Update Notes hyperlink to the bottom right  
 -Advanced Stats not showing for some users, figuring out fix
+-Website isn't very pleasant to look at on mobile devices
 
 
 # v1.1
