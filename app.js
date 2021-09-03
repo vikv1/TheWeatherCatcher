@@ -26,6 +26,12 @@ input.addEventListener("keyup", function(event) {
 })
 const weather={}
 
+//FOR POPULAR CITIES
+const seattle='seattle'
+const london='london'
+const tokyo='tokyo'
+//END OF POPULAR CITIES
+
 weather.temperature={
     unit: "farenheit"
 }
@@ -81,6 +87,9 @@ function getSearchWeather(city) {
     .then(function(){
         displayWeather()
     })
+    .then(function(){
+        changeBGImage()
+    })
 }
 function getWeather(lat, long) {
     longitude = long
@@ -111,6 +120,9 @@ function getWeather(lat, long) {
     .then(function(){
         displayWeather()
     })
+    .then(function(){
+        changeBGImage()
+    })
 }
 
 
@@ -124,62 +136,31 @@ function displayWeather() {
     advancedStats.innerHTML="Feels like: "+tempFeelsLike+"°F"+'\n'+"Minimum Temperature: "+minimumTemp+'°F'+'\n'+"Maximum Temperature: "+maximumTemp+'°F'+'\n'+"Pressure: "+pressure+'\n'+
                             "Humidity: "+humidity+'%'+'\n'+"Wind Speed: "+windSpeed+"mph"+'\n'+"Gust Speed: "+gustSpeed+"mph"+'\n'+"Visbility: "+visibility+"m"
                             +'\n'+"Number of Clouds: "+numClouds;
-    
-
-    function changeBGImage(){
-        if(weather.iconId <= 232 && weather.iconId >= 200 ) {
-            document.getElementsByTagName('body')[0] = "pictures/weather-bg/thunderstorm.jpg"
-        }
-        else if(weather.iconId <= 321 && weather.iconId >= 300 ) {
-            document.getElementsByTagName('body')[0] = "pictures/weather-bg/drizzle.jpg"
-        }
-        else if(weather.iconId <= 531 && weather.iconId >= 500 ) {
-            document.getElementsByTagName('body')[0] = "pictures/weather-bg/rain.jpg"
-        }
-        else if(weather.iconId <= 622 && weather.iconId >= 600 ) {
-            document.getElementsByTagName('body')[0] = "pictures/weather-bg/snow.jpg"
-        }
-        else if(weather.iconId <= 781 && weather.iconId >= 701 ) {
-            document.getElementsByTagName('body')[0] = "pictures/weather-bg/lowvis.jpg"
-        }
-        else if(weather.iconId === 800 ) {
-            document.getElementsByTagName('body')[0] = "pictures/weather-bg/clear.jpg"
-        }
-        else if(weather.iconId <= 804 && weather.iconId >= 801 ) {
-            document.getElementsByTagName('body')[0] = "pictures/weather-bg/clouds.jpg"
-        }
-    }
-    changeBGImage();
-   
 }
 
 
 
-
-//FOR CHOOSING WEATHER BACKGROUND
-/* 
-if(weather.iconId <= 232 && weather.iconId >= 200 ) {
-            var backgroundWeather = "pictures/weather-bg/thunderstorm.jpg"
-        }
-        else if(weather.iconId <= 321 && weather.iconId >= 300 ) {
-            var backgroundWeather = "drizzle"
-        }
-        else if(weather.iconId <= 531 && weather.iconId >= 500 ) {
-            var backgroundWeather = "rain"
-        }
-        else if(weather.iconId <= 622 && weather.iconId >= 600 ) {
-            var backgroundWeather = "snow"
-        }
-        else if(weather.iconId <= 781 && weather.iconId >= 701 ) {
-            var backgroundWeather = "low-visibility"
-        }
-        else if(weather.iconId === 800 ) {
-            var backgroundWeather = "clear"
-        }
-        else if(weather.iconId <= 804 && weather.iconId >= 801 ) {
-            var backgroundWeather = "clouds"
-        }
-*/
-
-//FOR CHANGIN WEATHER BACKGROUND
-// backgroundChange.innerHTML="<img src="+weather+">"
+function changeBGImage(){
+    if(weather.iconId === '11d') {
+        document.body.style.backgroundImage = "url('pictures/weather-bg/thunderstorm.jpg')";
+    }
+    else if(weather.iconId === '09d') {
+        document.body.style.backgroundImage = "url('pictures/weather-bg/drizzle.jpg')";
+    }
+    else if(weather.iconId === '10d' || weather.iconId === '13d' || weather.iconId === '09d') {
+        document.body.style.backgroundImage = "url('pictures/weather-bg/rain.jpg')";
+    }
+    else if(weather.iconId === '13d') {
+        document.body.style.backgroundImage = "url('pictures/weather-bg/snow.jpg')";
+    }
+    else if(weather.iconId === '50d') {
+        document.body.style.backgroundImage = "url('pictures/weather-bg/lowvis.jpg')";
+    }
+    else if(weather.iconId === '01d' || weather.iconId === '01n') {
+        document.body.style.backgroundImage = "url('pictures/weather-bg/clear.jpg')";
+    }
+    else if(weather.iconId === '02d' || weather.iconId === '02n' || weather.iconId === '03d'
+     || weather.iconId === '03n' || weather.iconId === '04d' || weather.iconId === '04n') {
+        document.body.style.backgroundImage = "url('pictures/weather-bg/clouds.jpg')";
+    }
+}
