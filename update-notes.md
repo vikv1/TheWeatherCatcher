@@ -1,5 +1,6 @@
 # v1.5
 --------------------------------------
+## Fixes/Additions:  
 +Added different background for every category of weather
 
 ### New Issues: 
