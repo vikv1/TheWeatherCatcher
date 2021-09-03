@@ -1,4 +1,4 @@
-# v1.2
+# v1.5
 --------------------------------------
 +Added different background for every category of weather
 
