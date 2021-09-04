@@ -8,7 +8,19 @@ const locationElement=document.querySelector(".location p")
 const notificationElement=document.querySelector(".notification")
 const advancedStats=document.querySelector(".adv-container p")
 const backgroundChange=document.querySelector("body")
-const popularCitiesTemp=document.querySelector("pop-container p")
+const popularCitiesTemp=document.querySelector(".pop-container p")
+
+seattleTemp = ''
+londonTemp = ''
+tokyoTemp = ''
+moscowTemp = ''
+parisTemp = ''
+newyorkTemp = ''
+romeTemp = ''
+delhiTemp = ''
+hkTemp = ''
+dubaiTemp = ''
+
 
 var input=document.getElementById("search")
 let city=""
@@ -26,12 +38,6 @@ input.addEventListener("keyup", function(event) {
 })
 const weather={}
 
-//FOR POPULAR CITIES
-const seattle='seattle'
-const london='london'
-const tokyo='tokyo'
-//END OF POPULAR CITIES
-
 weather.temperature={
     unit: "farenheit"
 }
@@ -46,6 +52,7 @@ if("geolocation" in navigator) {
     notificationElement.style.display='block'
     notificationElement.innerHTML="<p> Sorry, your browser doesn't support geolocation </p>"
 }
+
 
 function setPosition(position) {
     latitude=position.coords.latitude
@@ -62,7 +69,18 @@ function showError(error) {
     notificationElement.innerHTML="<p> Couldn't get location. </p>"
 }
 function getSearchWeather(city) {
+    let seattle='http://api.openweathermap.org/data/2.5/weather?q=seattle&units=imperial&appid='+key
+    let tokyo='http://api.openweathermap.org/data/2.5/weather?q=tokyo&units=imperial&appid='+key
+    let london='http://api.openweathermap.org/data/2.5/weather?q=london&units=imperial&appid='+key
+    let moscow='http://api.openweathermap.org/data/2.5/weather?q=moscow&units=imperial&appid='+key
+    let paris='http://api.openweathermap.org/data/2.5/weather?q=paris&units=imperial&appid='+key
+    let newyork = 'http://api.openweathermap.org/data/2.5/weather?q=new%20york&units=imperial&appid='+key
+    let rome = 'http://api.openweathermap.org/data/2.5/weather?q=rome&units=imperial&appid='+key
+    let delhi = 'http://api.openweathermap.org/data/2.5/weather?q=delhi&units=imperial&appid='+key
+    let hongkong = 'http://api.openweathermap.org/data/2.5/weather?q=hong%20kong&units=imperial&appid='+key
+    let dubai = 'http://api.openweathermap.org/data/2.5/weather?q=dubai&units=imperial&appid='+key
     let api='http://api.openweathermap.org/data/2.5/weather?q='+city+'&units=imperial'+'&appid='+key
+
     fetch(api)
     .then(function (response){
         let data=response.json()
@@ -83,6 +101,86 @@ function getSearchWeather(city) {
         visibility=(parseInt(data.visibility))
         numClouds=(parseInt(data.clouds.all))
         tempFeelsLike=(parseInt(data.main.feels_like))
+    })
+    fetch(seattle)
+    .then(function (response){
+        let seattleData=response.json()
+        return seattleData
+    })
+    .then(function(seattleData){
+        seattleTemp=(parseInt(seattleData.main.temp))
+    })
+    fetch(tokyo)
+    .then(function (response){
+        let tokyoData=response.json()
+        return tokyoData
+    })
+    .then(function(tokyoData){
+        tokyoTemp=(parseInt(tokyoData.main.temp))
+    })
+    fetch(london)
+    .then(function (response){
+        let londonData=response.json()
+        return londonData
+    })
+    .then(function(londonData){
+        londonTemp=(parseInt(londonData.main.temp))
+    })
+    fetch(moscow)
+    .then(function (response){
+        let moscowData=response.json()
+        return moscowData
+    })
+    .then(function(moscowData){
+        moscowTemp=(parseInt(moscowData.main.temp))
+    })
+    fetch(paris)
+    .then(function(response){
+        let parisData=response.json()
+        return parisData
+    })
+    .then(function(parisData){
+        parisTemp=(parseInt(parisData.main.temp))
+    })
+    fetch(newyork)
+    .then(function(response){
+        let nyData=response.json()
+        return nyData
+    })
+    .then(function(nyData){
+        newyorkTemp=(parseInt(nyData.main.temp))
+    })
+    fetch(rome)
+    .then(function(response){
+        let romeData=response.json()
+        return romeData
+    })
+    .then(function(romeData){
+        newyorkTemp=(parseInt(romeData.main.temp))
+    })
+    fetch(delhi)
+    .then(function(response){
+        let delhiData=response.json()
+        return delhiData
+    })
+    .then(function(delhiData){
+        delhiTemp=(parseInt(delhiData.main.temp))
+    })
+    fetch(hongkong)
+    .then(function(response){
+        let hkData=response.json()
+        return hkData
+    })
+    .then(function(hkData){
+        hkTemp=(parseInt(hkData.main.temp))
+    })
+    fetch(dubai)
+    .then(function(response){
+        let dubaiData=response.json()
+        return dubaiData
+    })
+    .then(function(dubaiData){
+        dubaiTemp=(parseInt(dubaiData.main.temp))
     })
     .then(function(){
         displayWeather()
@@ -117,6 +215,96 @@ function getWeather(lat, long) {
         numClouds=(parseInt(data.clouds.all))
         tempFeelsLike=(parseInt(data.main.feels_like))
     })
+    let seattle='http://api.openweathermap.org/data/2.5/weather?q=seattle&units=imperial&appid='+key
+    fetch(seattle)
+    .then(function (response){
+        let seattleData=response.json()
+        return seattleData
+    })
+    .then(function(seattleData){
+        seattleTemp=(parseInt(seattleData.main.temp))
+    })
+    let tokyo='http://api.openweathermap.org/data/2.5/weather?q=tokyo&units=imperial&appid='+key
+    fetch(tokyo)
+    .then(function (response){
+        let tokyoData=response.json()
+        return tokyoData
+    })
+    .then(function(tokyoData){
+        tokyoTemp=(parseInt(tokyoData.main.temp))
+    })
+    let london='http://api.openweathermap.org/data/2.5/weather?q=london&units=imperial&appid='+key
+    fetch(london)
+    .then(function (response){
+        let londonData=response.json()
+        return londonData
+    })
+    .then(function(londonData){
+        londonTemp=(parseInt(londonData.main.temp))
+    })
+    let moscow='http://api.openweathermap.org/data/2.5/weather?q=moscow&units=imperial&appid='+key
+    fetch(moscow)
+    .then(function (response){
+        let moscowData=response.json()
+        return moscowData
+    })
+    .then(function(moscowData){
+        moscowTemp=(parseInt(moscowData.main.temp))
+    })
+    let paris='http://api.openweathermap.org/data/2.5/weather?q=paris&units=imperial&appid='+key
+    fetch(paris)
+    .then(function(response){
+        let parisData=response.json()
+        return parisData
+    })
+    .then(function(parisData){
+        parisTemp=(parseInt(parisData.main.temp))
+    })
+    let newyork = 'http://api.openweathermap.org/data/2.5/weather?q=new%20york&units=imperial&appid='+key
+    fetch(newyork)
+    .then(function(response){
+        let nyData=response.json()
+        return nyData
+    })
+    .then(function(nyData){
+        newyorkTemp=(parseInt(nyData.main.temp))
+    })
+    let rome = 'http://api.openweathermap.org/data/2.5/weather?q=rome&units=imperial&appid='+key
+    fetch(rome)
+    .then(function(response){
+        let romeData=response.json()
+        return romeData
+    })
+    .then(function(romeData){
+        romeTemp = (parseInt(romeData.main.temp))
+    })
+    let delhi = 'http://api.openweathermap.org/data/2.5/weather?q=delhi&units=imperial&appid='+key
+    fetch(delhi)
+    .then(function(response){
+        let delhiData=response.json()
+        return delhiData
+    })
+    .then(function(delhiData){
+        delhiTemp=(parseInt(delhiData.main.temp))
+    })
+    let hongkong = 'http://api.openweathermap.org/data/2.5/weather?q=hong%20kong&units=imperial&appid='+key
+    fetch(hongkong)
+    .then(function(response){
+        let hkData=response.json()
+        return hkData
+    })
+    .then(function(hkData){
+        hkTemp=(parseInt(hkData.main.temp))
+    })
+    let dubai = 'http://api.openweathermap.org/data/2.5/weather?q=dubai&units=imperial&appid='+key
+    fetch(dubai)
+    .then(function(response){
+        let dubaiData=response.json()
+        return dubaiData
+    })
+    .then(function(dubaiData){
+        dubaiTemp=(parseInt(dubaiData.main.temp))
+    })
     .then(function(){
         displayWeather()
     })
@@ -132,6 +320,17 @@ function displayWeather() {
     tempElement.innerHTML=weather.temperature.value + '°<span>F<span>'
     descElement.innerHTML=weather.description
     locationElement.innerHTML= weather.city + ', ' + weather.country
+    popularCitiesTemp.innerHTML = "Seattle, USA: "+seattleTemp+"°F"+'\n'
+                                +"London, United Kingdom: "+londonTemp+"°F"+'\n'
+                                +"Tokyo, Japan: "+tokyoTemp+"°F"+'\n'
+                                +"Moscow, Russia: "+moscowTemp+"°F"+'\n'
+                                +"Paris, France: "+parisTemp+"°F"+'\n'
+                                +"New York, USA: "+newyorkTemp+"°F"+'\n'
+                                +"Rome, Italy: "+romeTemp+"°F"+'\n'
+                                +"Delhi, India: "+delhiTemp+"°F"+'\n'
+                                +"Hong Kong, China: "+hkTemp+"°F"+'\n'
+                                +"Dubai, UAE: "+dubaiTemp+"°F"+'\n'
+
     
     advancedStats.innerHTML="Feels like: "+tempFeelsLike+"°F"+'\n'+"Minimum Temperature: "+minimumTemp+'°F'+'\n'+"Maximum Temperature: "+maximumTemp+'°F'+'\n'+"Pressure: "+pressure+'\n'+
                             "Humidity: "+humidity+'%'+'\n'+"Wind Speed: "+windSpeed+"mph"+'\n'+"Gust Speed: "+gustSpeed+"mph"+'\n'+"Visbility: "+visibility+"m"
