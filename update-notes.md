@@ -5,7 +5,7 @@
 +"The Weather Catcher" text now contrasts with background
 
 ### New Issues:  
-None
+-User might have to continuously refresh for statistics to appear consistently
 
 ### Known Issues:  
 -Advanced Stats not showing for some users, figuring out fix  
