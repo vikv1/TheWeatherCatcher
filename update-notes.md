@@ -10,6 +10,7 @@ None
 -Advanced Stats not showing for some users, figuring out fix  
 -Website isn't very pleasant to look at on mobile devices
 
+####### 09/02/2021
 
 
 # v1.2
