@@ -1,3 +1,18 @@
+# v2.0
+--------------------------------------
+## Fixes/Additions:  
++Added list of popular cities
++"The Weather Catcher" text now contrasts with background
+
+### New Issues:  
+None
+
+### Known Issues:  
+-Advanced Stats not showing for some users, figuring out fix  
+-Website isn't very pleasant to look at on mobile devices
+
+###### 09/03/2021
+
 # v1.5
 --------------------------------------
 ## Fixes/Additions:  
