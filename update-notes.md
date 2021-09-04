@@ -19,15 +19,17 @@ None
 -Advanced Stats not showing for some users, figuring out fix  
 -Website isn't very pleasant to look at on mobile devices
 
-
+###### 09/02/2021
 
 # v1.1
 --------------------------------------
 The website's functionality is now working, insecure API requests are being leveled-up through a quick fix in the HTML head element.
 
-
+###### 09/01/2021
 
 # v1.0
 --------------------------------------
 
 Official release, really buggy. Working on fixing the weather api sending insecure requests.
+
+###### 09/01/2021
