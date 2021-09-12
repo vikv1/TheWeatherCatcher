@@ -33,9 +33,6 @@ input.addEventListener("keyup", function(event) {
 
         city=input.value
         getSearchWeather(city)
-        getSearchWeather(city)
-        getSearchWeather(city)
-        getSearchWeather(city)
         console.log(city)
     }
 })
@@ -47,7 +44,7 @@ weather.temperature={
 
 const KELVIN=273
 
-// const key='9a5b0e45e2527d15912fc63416ece6eb'
+const key='9a5b0e45e2527d15912fc63416ece6eb'
 
 if("geolocation" in navigator) {
     navigator.geolocation.getCurrentPosition(setPosition, showError)
