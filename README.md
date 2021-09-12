@@ -9,7 +9,7 @@ A weather website, made with HTML/CSS and JS.
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=crayzeerr" alt="crayzeerr" /></a> </p>
 
-- 🔭 I’m currently working on [The Weather Catcher](https://github.com/crayzeerr/crayzeerr.github.io)
+- 🔭 I’m currently working on The Weather Catcher
 
 - 🌱 I’m currently learning **JS, C++, and Java**.
 
