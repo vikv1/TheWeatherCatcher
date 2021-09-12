@@ -1,3 +1,16 @@
+# v2.3
+--------------------------------------
+## Fixes/Additions:
++Hopefully fixed the temperature undefined bug, and the multiple keypresses required bug.
+ 
+ ## New Issues:
+ +No known bugs at the moment
+ 
+ ## Known Issues:
+-Website isn't very pleasant to look at on mobile devices
+
+###### 09/11/2021
+
 # v2.0
 --------------------------------------
 ## Fixes/Additions:  
