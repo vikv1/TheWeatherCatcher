@@ -11,7 +11,7 @@ A weather website, made with HTML/CSS and JS.
 
 - 🔭 I’m currently working on [The Weather Catcher](crayzeerr.github.io)
 
-- 🌱 I’m currently learning **JS, C++, and Java**
+- 🌱 I’m currently learning **JS, C++, and Java**.
 
 - 👨‍💻 All of my projects are available at [github.com/crayzeerr](github.com/crayzeerr)
 
