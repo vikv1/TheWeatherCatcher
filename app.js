@@ -60,6 +60,7 @@ function setPosition(position) {
     longitude=position.coords.longitude
     getWeather(latitude, longitude)
     getWeather(latitude, longitude)
+    getWeather(latitude, longitude)
 }
 locationIcon.addEventListener("click", function(event){
     console.log("Clicked")
