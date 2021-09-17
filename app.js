@@ -32,6 +32,7 @@ input.addEventListener("keyup", function(event) {
         event.preventDefault();
 
         city=input.value
+        city=input.value
         getSearchWeather(city)
         console.log(city)
     }
@@ -57,6 +58,7 @@ if("geolocation" in navigator) {
 function setPosition(position) {
     latitude=position.coords.latitude
     longitude=position.coords.longitude
+    getWeather(latitude, longitude)
     getWeather(latitude, longitude)
 }
 locationIcon.addEventListener("click", function(event){
