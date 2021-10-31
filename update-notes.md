@@ -1,3 +1,14 @@
+# FINAL RELEASE
+--------------------------------------
+## Fixes/Additions:
+-Ironed out most bugs, just have a couple things left to do to make the website usable on different resolutions
+
+ ## Known Issues:
+-Website isn't very pleasant to look at on mobile devices
+
+###### Happy Halloween!
+###### 10/31/2021
+
 # v2.3
 --------------------------------------
 ## Fixes/Additions:
