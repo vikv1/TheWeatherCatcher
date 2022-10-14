@@ -1,3 +1,3 @@
-# crayzeerr.github.io
+# The Weather Catcher
 
-A weather website, made with HTML/CSS and JS.
+A weather webapp, made with HTML/CSS and JS.
